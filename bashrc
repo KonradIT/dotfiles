@@ -49,7 +49,7 @@ alias mocp="mocp; mocp -x"
 alias syy="sudo pacman -Syy"
 alias syu="sudo pacman -Syu"
 alias gpfw="python ~/GitHub/gopro_fw_dl/gopro-fw-dl.py"
-alias inotify_increase = "echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system"
+
 ### FUNCTIONS ###
 convert2insta(){
 in="$1"
