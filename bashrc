@@ -52,6 +52,9 @@ alias gpfw="python ~/GitHub/gopro_fw_dl/gopro-fw-dl.py"
 alias inotify_increase="echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system"
 alias clear='printf "\033c"'
 alias sf="clear && screenfetch"
+alias fixmega="pkill megasync && stfu megasync"
+alias fixadb="sudo adb kill-server && sudo adb devices"
+
 ### FUNCTIONS ###
 
 function convert2insta(){
@@ -132,7 +135,7 @@ function yturlfix(){
 	echo $url | sed 's/.be\//be.com\/watch?v=/g'
 }
 
-function 4chan() {
+function dl4chan() {
 
     if [[ $# -ne 1 ]]
     then
@@ -201,6 +204,9 @@ stfu() {
 	exec "$@" 1>/dev/null 2>/dev/null &
 }
 
+tpb(){
+	curl "https://thepiratebay.red/search/$@/0/7/" | html2text > temp.md && markdown-reader temp.md
+}
 
 ### no-out commands ###
 alias gedit='stfu gedit'
@@ -233,3 +239,22 @@ alias pacman='pacman --color auto'
 alias pactree='pactree --color'
 alias mc="mc -b"
 alias mocp='mocp -T blackwhite'
+
+### DOCKER commands ###
+alias docker_start="sudo systemctl start docker"
+alias docker_debian="sudo docker run -it debian /bin/bash"
+alias docker_psh="sudo docker run -it microsoft/powershell"
+
+### TERMUX ###
+var=$0
+if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
+	then
+		date
+
+		alias t="tmux"
+		alias l="ls"
+		alias c="cat"
+		alias r="ranger"
+		alias py="python"
+fi
+
