@@ -38,12 +38,12 @@ alias gitg='git log --graph --oneline --decorate --all'
 alias gs="git status"
 alias sf='clear && neofetch -t'
 alias q="exit"
+
 ### DIRS ###
 alias d="cd ~/Downloads"
 alias gh="cd ~/GitHub"
 alias h="cd ~"
 alias t="cd ~/Desktop/temp"
-alias m="cd /run/media/konrad/3b9877a0-5844-444b-8fa1-00a64be13f19/Downloads/"
 alias mocp="mocp; mocp -x"
 alias syy="sudo pacman -Syy"
 alias syu="sudo pacman -Syu"
@@ -90,10 +90,6 @@ function linx(){
 	curl -T "$@" -H "Linx-Randomize: yes" https://linx.li/upload/  
 }
 
-function weather(){
-	date
-	wego -forecast-api-key bf17c0347442c7f7b99bd07f0f864335 -location "40.590,-4.161"
-}
 
 function streamable(){
 	curl https://api.streamable.com/upload -F file=@$1 | python3 -c "import sys, json; print('https://streamable.com/' + json.load(sys.stdin)['shortcode'])"
@@ -204,9 +200,7 @@ stfu() {
 	exec "$@" 1>/dev/null 2>/dev/null &
 }
 
-tpb(){
-	curl "https://thepiratebay.red/search/$@/0/7/" | html2text > temp.md && markdown-reader temp.md
-}
+
 
 ### no-out commands ###
 alias gedit='stfu gedit'
@@ -258,3 +252,10 @@ if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
 		alias py="python"
 fi
 
+### MISC ###
+
+shopt -s autocd
+
+if [ -e ~/bash_private.sh ]; then
+	. ~/bash_private.sh
+fi
