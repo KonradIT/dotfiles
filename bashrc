@@ -38,12 +38,6 @@ alias gitg='git log --graph --oneline --decorate --all'
 alias gs="git status"
 alias sf='clear && neofetch -t'
 alias q="exit"
-
-### DIRS ###
-alias d="cd ~/Downloads"
-alias gh="cd ~/GitHub"
-alias h="cd ~"
-alias t="cd ~/Desktop/temp"
 alias mocp="mocp; mocp -x"
 alias syy="sudo pacman -Syy"
 alias syu="sudo pacman -Syu"
@@ -54,6 +48,13 @@ alias clear='printf "\033c"'
 alias sf="clear && screenfetch"
 alias fixmega="pkill megasync && stfu megasync"
 alias fixadb="sudo adb kill-server && sudo adb devices"
+
+### DIRS ###
+alias d="cd ~/Downloads"
+alias gh="cd ~/GitHub"
+alias h="cd ~"
+alias t="cd ~/Desktop/temp"
+
 
 ### FUNCTIONS ###
 
@@ -201,6 +202,14 @@ stfu() {
 }
 
 
+function tscreen(){
+	if [[ $* == "disable" ]]
+	then
+		xinput disable 11
+	else
+		xinput enable 11
+	fi
+}
 
 ### no-out commands ###
 alias gedit='stfu gedit'
@@ -213,26 +222,6 @@ BROWSER=/usr/bin/firefox
 EDITOR=vim
 export GREP_COLOR="1;32"
 export PS1="\[\033[38;5;33m\]\u\[$(tput sgr0)\]\[\033[38;5;45m\]@\[$(tput sgr0)\]\[\033[38;5;27m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W\[$(tput sgr0)\]\[\033[38;5;6m\]]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-
-#### COLORED OUT ###
-
-alias ls='ls -sh1 --color=auto'
-alias grep='grep --color=auto'
-alias diff='diff --color=auto'
-alias dmesg='dmesg --color=auto'
-alias tree='tree -C'
-alias dir='dir --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias ip='ip -c'
-alias pcregrep='pcregrep --color=auto'
-alias vdir='vdir --color=auto'
-alias watch='watch --color'
-alias cower='cower --color=auto'
-alias pacman='pacman --color auto'
-alias pactree='pactree --color'
-alias mc="mc -b"
-alias mocp='mocp -T blackwhite'
 
 ### DOCKER commands ###
 alias docker_start="sudo systemctl start docker"
@@ -250,6 +239,24 @@ if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
 		alias c="cat"
 		alias r="ranger"
 		alias py="python"
+	else
+		alias ls='ls -sh1 --color=auto'
+		alias grep='grep --color=auto'
+		alias diff='diff --color=auto'
+		alias dmesg='dmesg --color=auto'
+		alias tree='tree -C'
+		alias dir='dir --color=auto'
+		alias egrep='egrep --color=auto'
+		alias fgrep='fgrep --color=auto'
+		alias ip='ip -c'
+		alias pcregrep='pcregrep --color=auto'
+		alias vdir='vdir --color=auto'
+		alias watch='watch --color'
+		alias cower='cower --color=auto'
+		alias pacman='pacman --color auto'
+		alias pactree='pactree --color'
+		alias mc="mc -b"
+		alias mocp='mocp -T blackwhite'
 fi
 
 ### MISC ###
