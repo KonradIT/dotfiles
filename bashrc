@@ -231,7 +231,7 @@ alias docker_psh="sudo docker run -it microsoft/powershell"
 var=$0
 if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
 	then
-		export PS1="\[\e[36m\][\[\e[m\]\W\[\e[36m\]]\[\e[m\]\[\e[36m\]:\[\e[m\]  "
+		export PS1="\[\e[36m\][\[\e[m\]\W\[\e[36m\]]\[\e[m\]\[\e[36m\]:\[\e[m\]"
 		date
 		alias n="cd $HOME/notes"
 		alias nn="cd $HOME/notes && vim"
