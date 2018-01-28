@@ -36,7 +36,6 @@ alias media="printf 'covert2insta - converts video to instagram format\n\tconver
 alias pb="pastebinit -b http://pastebin.com -i "
 alias gitg='git log --graph --oneline --decorate --all'
 alias gs="git status"
-alias sf='clear && neofetch -t'
 alias q="exit"
 alias mocp="mocp; mocp -x"
 alias syy="sudo pacman -Syy"
@@ -233,12 +232,22 @@ var=$0
 if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
 	then
 		date
-
-		alias t="tmux"
-		alias l="ls"
+		alias n="cd $HOME/notes && vim"
+		alias nn="cd $HOME/notes && vim"
+		alias tm="tmux"
+		alias l="ls -sh1"
 		alias c="cat"
+		alias g='grep --color=auto'
 		alias r="ranger"
 		alias py="python"
+		alias tree='tree -C'
+		alias v='vim'
+		alias tree='tree -C'
+		alias p="pkg"
+		alias js="node"
+		alias nb="newsboat"
+		alias app="pkg install"
+		alias open="termux-open"
 	else
 		alias ls='ls -sh1 --color=auto'
 		alias grep='grep --color=auto'
