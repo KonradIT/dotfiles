@@ -232,8 +232,11 @@ var=$0
 if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
 	then
 		date
-		alias n="cd $HOME/notes && vim"
+		alias n="cd $HOME/notes"
 		alias nn="cd $HOME/notes && vim"
+		alias t="cd $HOME/temp"
+		alias gh="cd $HOME/GitHub"
+		alias hh="cd $HOME/homework"
 		alias tm="tmux"
 		alias l="ls -sh1"
 		alias c="cat"
