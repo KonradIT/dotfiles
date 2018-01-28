@@ -231,11 +231,13 @@ alias docker_psh="sudo docker run -it microsoft/powershell"
 var=$0
 if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
 	then
+		export 
+PS1="\[\e[36m\][\[\e[m\]\W\[\e[36m\]]\[\e[m\]\[\e[36m\]:\[\e[m\]  "
 		date
 		alias n="cd $HOME/notes"
 		alias nn="cd $HOME/notes && vim"
 		alias t="cd $HOME/temp"
-		alias gh="cd $HOME/GitHub"
+		alias gh="cd $HOME/gh"
 		alias hh="cd $HOME/homework"
 		alias tm="tmux"
 		alias l="ls -sh1"
@@ -245,7 +247,6 @@ if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
 		alias py="python"
 		alias tree='tree -C'
 		alias v='vim'
-		alias tree='tree -C'
 		alias p="pkg"
 		alias js="node"
 		alias nb="newsboat"
