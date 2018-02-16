@@ -36,6 +36,7 @@ alias media="printf 'covert2insta - converts video to instagram format\n\tconver
 alias pb="pastebinit -b http://pastebin.com -i "
 alias gitg='git log --graph --oneline --decorate --all'
 alias gs="git status"
+alias sf='clear && neofetch -t'
 alias q="exit"
 alias mocp="mocp; mocp -x"
 alias syy="sudo pacman -Syy"
@@ -47,7 +48,7 @@ alias clear='printf "\033c"'
 alias sf="clear && screenfetch"
 alias fixmega="pkill megasync && stfu megasync"
 alias fixadb="sudo adb kill-server && sudo adb devices"
-
+alias ve_py2="source /home/$USER/Desktop/ve/bin/activate"
 ### DIRS ###
 alias d="cd ~/Downloads"
 alias gh="cd ~/GitHub"
@@ -215,13 +216,15 @@ alias gedit='stfu gedit'
 alias gimp='stfu gimp'
 alias firefox='stfu firefox'
 
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 ### Variables ###
 
 BROWSER=/usr/bin/firefox
 EDITOR=vim
 export GREP_COLOR="1;32"
-export PS1="\[\033[38;5;33m\]\u\[$(tput sgr0)\]\[\033[38;5;45m\]@\[$(tput sgr0)\]\[\033[38;5;27m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W\[$(tput sgr0)\]\[\033[38;5;6m\]]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-
+export PS1="\[\033[38;5;33m\]\u\[$(tput sgr0)\]\[\033[38;5;45m\]@\[$(tput sgr0)\]\[\033[38;5;27m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\$(parse_git_branch)\[\033[38;5;6m\]]:\[$(tput sgr0)\] "
 ### DOCKER commands ###
 alias docker_start="sudo systemctl start docker"
 alias docker_debian="sudo docker run -it debian /bin/bash"
@@ -231,26 +234,15 @@ alias docker_psh="sudo docker run -it microsoft/powershell"
 var=$0
 if [ $var = "/data/data/com.termux/files/usr/bin/bash" ]
 	then
-		export PS1="\[\e[36m\][\[\e[m\]\W\[\e[36m\]]\[\e[m\]\[\e[36m\]:\[\e[m\]"
 		date
-		alias n="cd $HOME/notes"
-		alias nn="cd $HOME/notes && vim"
-		alias t="cd $HOME/temp"
-		alias gh="cd $HOME/gh"
-		alias hh="cd $HOME/homework"
-		alias tm="tmux"
-		alias l="ls -sh1"
+
+		alias t="tmux"
+		alias l="ls"
 		alias c="cat"
-		alias g='grep --color=auto'
 		alias r="ranger"
 		alias py="python"
 		alias tree='tree -C'
-		alias v='vim'
-		alias p="pkg"
-		alias js="node"
-		alias nb="newsboat"
-		alias app="pkg install"
-		alias open="termux-open"
+		alias ls='ls -sh1 --color=auto'
 	else
 		alias ls='ls -sh1 --color=auto'
 		alias grep='grep --color=auto'
