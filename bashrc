@@ -112,7 +112,7 @@ BROWSER=/usr/bin/firefox
 EDITOR=vim
 export GREP_COLOR="1;32"
 export PS1="\[\033[38;5;33m\]\u\[$(tput sgr0)\]\[\033[38;5;45m\]@\[$(tput sgr0)\]\[\033[38;5;27m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\$(parse_git_branch)\[\033[38;5;6m\]]:\[$(tput sgr0)\] "
-
+export PATH=$PATH:~/.npm-global/bin
 
 ###############################
 #                             #
