@@ -33,7 +33,7 @@ alias clear='printf "\033c"'
 alias fixadb="sudo adb kill-server && sudo adb devices"
 alias dmenu_fixed="dmenu_run -fn '-xos4-terminus-medium-r-*-*-14-*' -h 26"
 alias cleanphoto="exiftool -all= $*"
-
+alias today='git log --pretty=format:"%h" --since="6am" | tail -1 | xargs -0 -I {} git diff {}..HEAD'
 
 #####################
 #                   #
