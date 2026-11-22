@@ -1,0 +1,129 @@
+checksum: 64204
+manuallyEdited: 0
+timezoneMinutes: 0
+ppmunit: 0
+semver: 2.11.4
+board: commando8
+calib: 
+   LH:
+      mid: 1039
+      spanNeg: 816
+      spanPos: 769
+   LV:
+      mid: 1266
+      spanNeg: 630
+      spanPos: 530
+   RV:
+      mid: 1007
+      spanNeg: 541
+      spanPos: 534
+   RH:
+      mid: 1262
+      spanNeg: 688
+      spanPos: 588
+currModel: 0
+contrast: 25
+vBatWarn: 32
+txVoltageCalibration: 3
+backlightMode: backlight_mode_all
+antennaMode: MODE_PER_MODEL
+disableRtcWarning: 0
+keysBacklight: 0
+dontPlayHello: 0
+internalModule: TYPE_CROSSFIRE
+trainer: 
+   mix: 
+      0:
+         srcChn: 0
+         mode: REPL
+         studWeight: 100
+      1:
+         srcChn: 1
+         mode: REPL
+         studWeight: 100
+      2:
+         srcChn: 2
+         mode: REPL
+         studWeight: 100
+      3:
+         srcChn: 3
+         mode: REPL
+         studWeight: 100
+view: 18
+fai: 0
+beepMode: mode_nokeys
+alarmsFlash: 0
+disableMemoryWarning: 0
+disableAlarmWarning: 0
+stickMode: 1
+timezone: 0
+adjustRTC: 1
+inactivityTimer: 10
+internalModuleBaudrate: 4
+splashMode: 3
+hapticMode: mode_all
+switchesDelay: 0
+lightAutoOff: 2
+templateSetup: 21
+PPM_Multiplier: 0
+hapticLength: 1
+beepLength: 2
+hapticStrength: 3
+gpsFormat: 0
+audioMuteEnable: 0
+speakerPitch: 0
+speakerVolume: 12
+vBatMin: 32
+vBatMax: 42
+backlightBright: 0
+globalTimer: 31550
+bluetoothBaudrate: 0
+bluetoothMode: OFF
+countryCode: 0
+pwrOnSpeed: 2
+pwrOffSpeed: 2
+noJitterFilter: 0
+imperial: 0
+disableRssiPoweroffAlarm: 0
+USBMode: 0
+jackMode: 0
+ttsLanguage: "en"
+beepVolume: 2
+wavVolume: 4
+varioVolume: 1
+backgroundVolume: 3
+varioPitch: 0
+varioRange: 0
+varioRepeat: 0
+switchConfig: 
+   SA:
+      type: 2pos
+      name: ""
+   SB:
+      type: 3pos
+      name: ""
+   SC:
+      type: 3pos
+      name: ""
+   SD:
+      type: 2pos
+      name: ""
+backlightColor: 0
+bluetoothName: ""
+ownerRegistrationID: ""
+rotEncMode: 0
+uartSampleMode: 0
+radioGFDisabled: 0
+radioTrainerDisabled: 1
+modelHeliDisabled: 1
+modelFMDisabled: 1
+modelCurvesDisabled: 0
+modelGVDisabled: 0
+modelLSDisabled: 0
+modelSFDisabled: 0
+modelCustomScriptsDisabled: 1
+modelTelemetryDisabled: 0
+disableTrainerPoweroffAlarm: 0
+disablePwrOnOffHaptic: 0
+invertLCD: 0
+pwrOffIfInactive: 0

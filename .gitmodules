@@ -1,0 +1,6 @@
+[submodule "drones/edgetx-radio/edgetx-gps-qrcode"]
+	path = drones/edgetx-radio/edgetx-gps-qrcode
+	url = https://github.com/alufers/edgetx-gps-qrcode.git
+[submodule "drones/edgetx-radio/gpslog"]
+	path = drones/edgetx-radio/gpslog
+	url = https://github.com/poweredjj/gpslog.git
