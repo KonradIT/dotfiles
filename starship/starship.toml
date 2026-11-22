@@ -1,0 +1,35 @@
+# Arch PS1 clone: user@host [dir (branch)]:
+add_newline = false
+
+format = '$hostname[ ](fg:15)[\[](fg:6)$directory$git_branch$git_status[\]:](fg:6) '
+
+[hostname]
+ssh_only = false
+trim_at = ''
+style = 'fg:27'
+format = '[$hostname]($style)'
+
+[directory]
+truncation_length = 1
+truncate_to_repo = false
+style = 'fg:15'
+format = '[$path]($style)'
+
+[git_branch]
+symbol = ''
+style = 'fg:15'
+format = '[ \($branch\)]($style)'
+
+[git_status]
+style = 'fg:208'
+format = '[ $all_status$ahead_behind]($style)'
+conflicted = '='
+ahead = '⇡'
+behind = '⇣'
+diverged = '⇕'
+untracked = '?'
+stashed = '$'
+modified = '!'
+staged = '+'
+renamed = '»'
+deleted = '✘'

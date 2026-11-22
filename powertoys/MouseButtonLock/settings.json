@@ -1,0 +1,1 @@
+{"properties":{"lmb_lock_enabled":{"value":false},"rmb_lock_enabled":{"value":true},"mmb_lock_enabled":{"value":false},"hold_duration_ms":{"value":1200},"move_cancel_pixels":{"value":5}},"name":"MouseButtonLock","version":"1.0"}
